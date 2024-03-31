@@ -4,7 +4,7 @@ import { FrameActionDataParsed } from 'frames.js';
 const html = String.raw;
 
 export default {
-    name: 'count', // Name retained for now, to be changed later
+    name: 'count',
     logic: async (frameMessage: FrameActionDataParsed) => {
         switch (frameMessage.buttonIndex) {
             case 1: // Readme (Frame) button
@@ -12,56 +12,48 @@ export default {
                 return `another-frame`; // Placeholder for the name of the desired frame
             case 2: // Readme (Browser) button
                 // Logic to open browser to specified NFTBook asset URL
-                return `browser`;
+                window.open('https://twitter.com/thomasdylandan2/photo', '_blank');
+                return 'count';
             case 3: // Subscribe button
                 // Logic to collect user's email address and add to subscribers database
-                return `subscribe`;
+                // Placeholder logic for now
+                console.log('Subscribe button clicked');
+                return 'count';
             case 4: // Mint button
                 // Logic to initiate minting process for an NFTBook
-                return `mint`;
+                // Placeholder logic for now
+                console.log('Mint button clicked');
+                return 'count';
             default: 
+                // Increment count for other cases
                 await incrementCount();
                 await setFramer(frameMessage.requesterFid, frameMessage.inputText);
                 return `count`;
         }
     },
     content: async () => {
+        // Fetch your Twitter profile picture or use a placeholder image URL
+        const imageUrl = 'https://twitter.com/thomasdylandan2/photo';
+
         const count = await getCount();
         const { username, taunt } = await getFramer() || {};
         return html`
-            <frame-image layout="main">
-                <div style="
-                    font-family: 'Redaction';
-                    display: flex;
-                    flex-direction: column;
-                    width: 100vw;
-                    height: 100vh;
-                    color: white;
-                    background: black;
-                    align-items: center;
-                    justify-content: center;
-                    line-height: 1;
-                ">
-                    <div style="display: flex; gap: 1rem; font-size: 5em;">
-                        i've been framed <span style="font-family:'Redaction-100'">${count || 0}</span> times
-                    </div>
-                    <div style="font-size: 2em; margin-top: 1em">
-                        last framed by @${username || ''}
-                    </div>
-                    ${ taunt ? `
-                        <div style="font-size: 2em; line-height: 1.3; color: #cacaca; margin-top: 1em; padding: 0 2rem; text-align: center;">
-                            "${taunt}"
-                        </div>
-                    ` : '' }
-                </div>
-            </frame-image>
-            <frame-input text="text" />
-            <frame-button>
-                🫵  Readme!
-            </frame-button>
-            <frame-button>
-                🎬 View credits
-            </frame-button>
+        <frame-image layout="main" src="${imageUrl}">
+        <!-- Placeholder content for the frame -->
+    </frame-image>
+    <frame-input text="text" />
+    <frame-button>
+        🫵  Readme!
+    </frame-button>
+    <frame-button>
+        🎬 View credits
+    </frame-button>
+    <frame-button>
+        Subscribe
+    </frame-button>
+    <frame-button>
+        Mint
+    </frame-button>
         `;
     },
 }
