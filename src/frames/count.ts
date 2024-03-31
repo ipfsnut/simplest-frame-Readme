@@ -12,7 +12,7 @@ export default {
                 return `another-frame`; // Placeholder for the name of the desired frame
             case 2: // Readme (Browser) button
                 // Logic to open browser to specified NFTBook asset URL
-                window.open('https://twitter.com/thomasdylandan2/photo', '_blank');
+                window.open('https://ipfs.io/ipfs/QmXisbuZZjJdRLHukwrQQ2h1E53zL4bNeHjcwHZyq4woia', '_blank');
                 return 'count';
             case 3: // Subscribe button
                 // Logic to collect user's email address and add to subscribers database
@@ -33,7 +33,7 @@ export default {
     },
     content: async () => {
         // Fetch your Twitter profile picture or use a placeholder image URL
-        const imageUrl = 'https://twitter.com/thomasdylandan2/photo';
+        const imageUrl = 'https://ipfs.io/ipfs/QmXisbuZZjJdRLHukwrQQ2h1E53zL4bNeHjcwHZyq4woia';
 
         const count = await getCount();
         const { username, taunt } = await getFramer() || {};

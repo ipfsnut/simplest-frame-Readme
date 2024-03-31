@@ -9,11 +9,11 @@ export default {
         }
     },
     content: () => html`
-        <frame-image src="https://twitter.com/thomasdylandan2/photo" />
+        <frame-image src="https://ipfs.io/ipfs/QmXisbuZZjJdRLHukwrQQ2h1E53zL4bNeHjcwHZyq4woia" />
         <frame-button>
             🔳 Readme
         </frame-button>
-        <frame-button action="link" target="https://twitter.com/thomasdylandan2/photo">
+        <frame-button action="link" target="https://ipfs.io/ipfs/QmXisbuZZjJdRLHukwrQQ2h1E53zL4bNeHjcwHZyq4woia">
             {😺} View on Github
         </frame-button>
     `

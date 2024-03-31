@@ -9,7 +9,7 @@ export default {
         }
     },
     content: () => html`
-        <frame-image src="/images/credits.png" />
+        <frame-image src="https://ipfs.io/ipfs/QmXisbuZZjJdRLHukwrQQ2h1E53zL4bNeHjcwHZyq4woia" />
         <frame-button>
             ⬅️ Back
         </frame-button>
