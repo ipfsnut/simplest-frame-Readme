@@ -9,7 +9,7 @@ export default {
         }
     },
     content: () => html`
-        <frame-image src="https://ipfs.nftbookbazaar.com/ipfs/bafybeihjwfufzam6mne3gy5iob22xxbhgp7as5v3auafgqon747mimd454" />
+        <frame-image src="https://twitter.com/thomasdylandan2/photo" />
         <frame-button>
             🔳 Readme
         </frame-button>
