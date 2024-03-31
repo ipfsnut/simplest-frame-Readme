@@ -4,11 +4,21 @@ import { FrameActionDataParsed } from 'frames.js';
 const html = String.raw;
 
 export default {
-    name: 'count',
+    name: 'count', // Name retained for now, to be changed later
     logic: async (frameMessage: FrameActionDataParsed) => {
         switch (frameMessage.buttonIndex) {
-            case 2:
-                return `credits`;
+            case 1: // Readme (Frame) button
+                // Logic to navigate to another frame
+                return `another-frame`; // Placeholder for the name of the desired frame
+            case 2: // Readme (Browser) button
+                // Logic to open browser to specified NFTBook asset URL
+                return `browser`;
+            case 3: // Subscribe button
+                // Logic to collect user's email address and add to subscribers database
+                return `subscribe`;
+            case 4: // Mint button
+                // Logic to initiate minting process for an NFTBook
+                return `mint`;
             default: 
                 await incrementCount();
                 await setFramer(frameMessage.requesterFid, frameMessage.inputText);
@@ -47,7 +57,7 @@ export default {
             </frame-image>
             <frame-input text="text" />
             <frame-button>
-                🫵 Frame me!
+                🫵  Readme!
             </frame-button>
             <frame-button>
                 🎬 View credits

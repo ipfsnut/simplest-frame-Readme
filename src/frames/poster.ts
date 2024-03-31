@@ -9,11 +9,11 @@ export default {
         }
     },
     content: () => html`
-        <frame-image src="/images/poster-animated.gif" />
+        <frame-image src="https://ipfs.nftbookbazaar.com/ipfs/bafybeihjwfufzam6mne3gy5iob22xxbhgp7as5v3auafgqon747mimd454" />
         <frame-button>
-            🔳 Try Demo
+            🔳 Readme
         </frame-button>
-        <frame-button action="link" target="https://github.com/depatchedmode/simplest-frame">
+        <frame-button action="link" target="https://ipfs.nftbookbazaar.com/ipfs/QmTK9Jz832SVC3JbSNztGmMtmg88ntDdv3otAjgidoNxGY">
             {😺} View on Github
         </frame-button>
     `
