@@ -14,7 +14,7 @@ export default (
                     font-family: "Redaction";
                     src:
                         local("Redaction"),
-                        url("/fonts/Redaction-Regular") format("woff2");
+                        url("/fonts/Redaction-Regular, Arial, sans-serif") format("woff2");
                 }
                 body {
                     margin: 0;

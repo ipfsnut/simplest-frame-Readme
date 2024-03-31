@@ -4,10 +4,10 @@ export default async (frameContent) => {
     const head = html`
         <style>
             @font-face {
-                font-family: "Redaction";
+                font-family: "Redaction, Arial, sans-serif";
                 src:
-                    local("Redaction"),
-                    url("/fonts/Redaction-Regular") format("woff2");
+                    local("Redaction, Arial, sans-serif"),
+                    url("/fonts/Redaction-Regular, Arial, sans-serif") format("woff2");
             }
             :root {
                 --background: white;
@@ -21,7 +21,7 @@ export default async (frameContent) => {
             }
             body {
                 padding: 2rem;
-                font-family: "Redaction";
+                font-family: "Redaction, Arial, sans-serif";
                 background: var(--background);
                 color: var(--text);
                 display: flex;
