@@ -13,7 +13,7 @@ export default {
         <frame-button>
             🔳 Readme
         </frame-button>
-        <frame-button action="link" target="https://ipfs.nftbookbazaar.com/ipfs/QmTK9Jz832SVC3JbSNztGmMtmg88ntDdv3otAjgidoNxGY">
+        <frame-button action="link" target="https://twitter.com/thomasdylandan2/photo">
             {😺} View on Github
         </frame-button>
     `
